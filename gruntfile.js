@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             // configurable paths
             app: 'app',
             lib: 'lib',
-            coverageE2E: 'coverage',
+            coverageE2E: 'test/js/functional/protractor/coverage',
             instrumentedE2E: '<%= dirs.coverageE2E %>/instrumented'
 //            protractorConfigFile: '/usr/local/lib/node_modules/protractor/referenceConf.js'
         },
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
                 options: {
                     async: true,     //an async process will be terminated when grunt finishes
                     execOptions: {
-                        cwd: '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/coverage/instrumented'//,
+                        cwd: '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/coverage/instrumented'
 //                        detached: true //if true, process is kept running after grunt completes
                     }
                 }
@@ -91,27 +91,35 @@ module.exports = function(grunt) {
                         //whether true or false.
                     }
                 }
-            }
-        },
-
-        protractor_coverage: {
-            options: {
-                configFile: '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/tests/protractorConf.js', // Default config file
-                //configFile: 'test/js/functional/protractor/tests/protractorConf.js', // Default config file
-                keepAlive: true, // If false, the grunt process stops when the test fails.
-                coverageDir: '<%= dirs.instrumentedE2E %>',
-                debug: false,
-                args: {}
             },
-            chrome: {
+            istanbul_cover: {
+                command: 'istanbul cover test/js/functional/protractor/cta/cta.js',
                 options: {
-                    args: {
-                        baseUrl: 'http://localhost:3000/',
-                        'browser': 'chrome'
+                    async: true,     //an async process will be terminated when grunt finishes
+                    execOptions: {
+                        cwd: '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/'
                     }
                 }
             }
         },
+
+//        protractor_coverage: {
+//            options: {
+//                configFile: '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/tests/protractorConf.js',
+//                keepAlive: true, // If false, the grunt process stops when the test fails.
+//                coverageDir: '<%= dirs.instrumentedE2E %>',
+//                debug: false,
+//                args: {}
+//            },
+//            chrome: {
+//                options: {
+//                    args: {
+//                        baseUrl: 'http://localhost:3000/',
+//                        'browser': 'chrome'
+//                    }
+//                }
+//            }
+//        },
 
         makeReport: {
             src: '<%= dirs.instrumentedE2E %>/*.json',
@@ -124,13 +132,13 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', [
-        'clean',
-        'copy:appFiles',
-        'copy:libFiles',
-        'instrument',
+//        'clean',
+//        'copy:appFiles',
+//        'copy:libFiles',
+//        'instrument',
 //        'shell:rails_server',
 //        'shell:selenium_server',
-        'protractor_coverage:chrome',
+//        'protractor_coverage:chrome',
         'makeReport'
     ]);
 };

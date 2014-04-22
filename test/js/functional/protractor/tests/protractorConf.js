@@ -55,9 +55,10 @@ exports.config = {
   specs: [
       //'tests/specs/**/*.spec.js',
     //'comp_chart_yoy/*.js'
-    //'/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/protractor/header/header.js',
-    '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/tests/specs/comp_chart/comp_chart_yoy.spec.js'
+    '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/cta/cta.js'
+//    '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/tests/specs/comp_chart/comp_chart_yoy.spec.js'
   ],
+
 
   // Patterns to exclude.
   exclude: [],

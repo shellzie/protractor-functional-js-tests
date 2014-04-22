@@ -1,3 +1,7 @@
+//var jasmine = require('jasmine-node');
+
+//var expect = chai.expect;
+
 describe('cta test page', function() {
 
     var ptor, driver;
@@ -8,13 +12,6 @@ describe('cta test page', function() {
         ptor.ignoreSynchronization = true;
         browser.driver.get('http://localhost:3000/showroom_cms/content/components/core/cta.html');
     });
-//
-//    it('Shows a cta', function() {
-//        var el = browser.driver.findElement(by.id('callToAction'));
-//        expect(el.getText()).toEqual('CTA with ID');
-//        var el2 = browser.driver.findElement(by.css('.ccta'));
-//        expect(el2.getText()).toContain('Buy Now');
-//    }, 30000);
 
     it('displays all ctas with correct urls', function() {
         var items = element.all(by.css('a.ccta')).map(function(elm, index) {
