@@ -128,9 +128,9 @@ module.exports = function(grunt) {
         'copy:appFiles',
         'copy:libFiles',
         'instrument',
-        'shell:rails_server',
-        'shell:selenium_server',
-//        'protractor_coverage:chrome',
-        'makeReport'
+//        'shell:rails_server',
+//        'shell:selenium_server',
+        'protractor_coverage:chrome'
+//        'makeReport'
     ]);
 };
