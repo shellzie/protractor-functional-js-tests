@@ -100,7 +100,7 @@ module.exports = function(grunt) {
                 //configFile: 'test/js/functional/protractor/tests/protractorConf.js', // Default config file
                 keepAlive: true, // If false, the grunt process stops when the test fails.
                 coverageDir: '<%= dirs.instrumentedE2E %>',
-                debug: true,
+                debug: false,
                 args: {}
             },
             chrome: {
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
         'instrument',
 //        'shell:rails_server',
 //        'shell:selenium_server',
-        'protractor_coverage:chrome'
-//        'makeReport'
+        'protractor_coverage:chrome',
+        'makeReport'
     ]);
 };

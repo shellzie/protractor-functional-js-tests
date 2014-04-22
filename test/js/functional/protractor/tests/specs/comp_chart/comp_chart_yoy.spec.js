@@ -9,12 +9,12 @@ describe('comparison chart - YOY - test page', function() {
         browser.driver.get('http://localhost:3000/showroom_cms/content/components/comparison/comparison_yoy.html');
     });
 
-//    it('loads the comp chart component on test page', function() {
-//
-//        var title = $('h3');
-//        expect(title.getText()).toBe('Feature List by Version Year');
-//
-//    });
+    it('loads the comp chart component on test page', function() {
+
+        var title = $('h3');
+        expect(title.getText()).toBe('Feature List by Version Year');
+
+    });
 //
 //    it('toggles the disclosures when user clicks on disclosures link', function() {
 //
