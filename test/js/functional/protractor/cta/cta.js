@@ -1,7 +1,3 @@
-//var jasmine = require('jasmine-node');
-
-//var expect = chai.expect;
-
 describe('cta test page', function() {
 
     var ptor, driver;
@@ -14,12 +10,17 @@ describe('cta test page', function() {
     });
 
     it('displays all ctas with correct urls', function() {
+//        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> elts = " + element.all(by.css('a.ccta')));
+
         var items = element.all(by.css('a.ccta')).map(function(elm, index) {
+//            console.log(" >>>>>>>>> elm = " + elm + " index = " + index);
             return {
                 index: index,
                 url: elm.getAttribute('href')
             };
         });
+
+
         expect(items).toEqual([
             {index: 0, url: 'http://intuit.com/'},
             {index: 1, url: 'http://intuit.com/'},

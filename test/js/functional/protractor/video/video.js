@@ -19,7 +19,7 @@ describe('video test page', function() {
             var first_match = code.match(re)[0];
             var video_id = "" + first_match.substring(0, first_match.length-1); //remove last character which was a quote.
             console.log(">>>>>>>>> video_id = " + video_id);
-
+            expect(video_id).toContain("video_");
 
 //            console.log(">>>>>> window = " + scope);
 //            console.log(">>>>>> browser = " + browser);
@@ -32,7 +32,6 @@ describe('video test page', function() {
 
         });
 
-        console.log("++++++++++ outer = " + outer);
 
 
     });   //waiting for overall page to load

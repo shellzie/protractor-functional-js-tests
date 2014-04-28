@@ -54,9 +54,10 @@ exports.config = {
     // Spec patterns are relative to the location of this config.
     specs: [
         //'tests/specs/**/*.spec.js',
-        //'comp_chart_yoy/*.js'
-        '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/cta/cta.js'
-//    '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/tests/specs/comp_chart/comp_chart_yoy.spec.js'
+//        '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/header/header.js',  //code changes from cq broke this test.
+//        '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/cta/cta.js',
+//        '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/video/video.js',
+        '/Users/mkam1/michelle_sbm_workspace/CMT/harmony_cms/dev/spec/dummy/test/js/functional/protractor/comp_chart_yoy/comp_chart_yoy.js'
     ],
 
 

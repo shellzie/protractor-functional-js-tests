@@ -1,3 +1,4 @@
+//CODE CHANGES FROM CQ SEEMS TO HAVE BROKEN THIS TEST. WAS WORKING BEFORE.
 describe('header test page', function() {
 
     var ptor, driver;
