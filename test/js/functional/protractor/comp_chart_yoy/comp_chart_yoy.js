@@ -30,6 +30,12 @@ describe('comparison chart - YOY - test page', function() {
         var item = $('.cdisclosure-text p');
         expect(item.getText()).toContain('30% off the monthly price for QuickBooks Online Essentials');
     });
+//
+//    it('keeps top nav bar in place while mouse scrolls down', function() {
+//        ptor.executeScript('window.scrollTo(0,1000);').then(function () {
+//            expect()
+//        })
+//    });
 
 
 });
